@@ -1,19 +1,13 @@
-def generatePermutations(string):
-    permutations = []
-    recursivePermute(string, "", permutations)
-    return permutations
-
-def recursivePermute(remainingString, currentPermutation, permutations):
-    if len(remainingString) == 1:
-        permutations.append(currentPermutation + remainingString)
+def cari_permutasi(sisa, saat_ini, permutasi):
+    if len(sisa) == 0:
+        permutasi.append(saat_ini)
     else:
-        for char in remainingString:
-            nextPermutation = currentPermutation + char
-            nextRemaining = remainingString.replace(char, '', 1)
-            recursivePermute(nextRemaining, nextPermutation, permutations)
+        for i in range(len(sisa)):
+            sisa_baru = sisa[:i] + sisa[i+1:]
+            saat_ini_baru = saat_ini + sisa[i]
+            cari_permutasi(sisa_baru, saat_ini_baru, permutasi)
 
-# Contoh penggunaan
-input_string = input("Masukkan kata :")
-permutations = generatePermutations(input_string)
-for perm in permutations:
-    print(perm)
+masukan_string = input("Masukkan String: ")
+hasil_permutasi = []
+cari_permutasi(masukan_string, "", hasil_permutasi)
+print(hasil_permutasi)
