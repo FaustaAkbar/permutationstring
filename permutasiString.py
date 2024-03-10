@@ -1,3 +1,4 @@
+# Fausta Akbar W - 1301220081
 def cari_permutasi(sisa, saat_ini, permutasi):
     if len(sisa) == 0:
         permutasi.append(saat_ini)
@@ -7,7 +8,7 @@ def cari_permutasi(sisa, saat_ini, permutasi):
             saat_ini_baru = saat_ini + sisa[i]
             cari_permutasi(sisa_baru, saat_ini_baru, permutasi)
 
-masukan_string = input("Masukkan String: ")
+masukan_string = input()
 hasil_permutasi = []
 cari_permutasi(masukan_string, "", hasil_permutasi)
 print(hasil_permutasi)
