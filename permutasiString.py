@@ -12,4 +12,5 @@ masukan_string = input()
 hasil_permutasi = []
 //msfadsofjaojaf
 cari_permutasi(masukan_string, "", hasil_permutasi)
+print("hello world")
 print(hasil_permutasi)
