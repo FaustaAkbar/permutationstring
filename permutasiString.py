@@ -10,8 +10,5 @@ def cari_permutasi(sisa, saat_ini, permutasi):
 
 masukan_string = input()
 hasil_permutasi = []
-//msfadsofjaojaf
-//comentar
 cari_permutasi(masukan_string, "", hasil_permutasi)
-print("hello world")
 print(hasil_permutasi)
